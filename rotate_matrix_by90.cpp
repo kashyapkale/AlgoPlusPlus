@@ -49,13 +49,14 @@ void reverse_rows(int arr[][max],int row,int col){
 }
 
 void transpose(int arr[][max],int row,int col){
-    int arr2[max][max];
+    //int arr2[max][max];
     for(int i = 0;i<row;i++){
         for(int j = 0;j<col;j++){
-            arr2[j][i]=arr[i][j];
+            cout<<arr[j][i]<<" ";
         } 
+        cout<<endl;
     }
-    display_array(arr2,row,col);    
+    //display_array(arr2,row,col);    
 }
 
 
