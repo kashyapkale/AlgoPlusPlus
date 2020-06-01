@@ -9,7 +9,7 @@ void two_pointer(int arr[],int n){
     sort(arr,arr+n);
     int i = 0;
     int j = n-1;
-    while(i!=j){
+    while(i<j){
         if(arr[i]+arr[j] == key){
             cout<<arr[i]<<" "<<arr[j]<<endl;
             i++;
