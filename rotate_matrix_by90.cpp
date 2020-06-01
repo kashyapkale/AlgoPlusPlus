@@ -5,7 +5,7 @@ using namespace std;
 
 
 //swap function
-void swap(int *a,int *b){
+void myswap(int *a,int *b){
     int temp;
     temp=*a;
     *a=*b;
@@ -39,8 +39,8 @@ void reverse_rows(int arr[][max],int row,int col){
     for(int i = 0;i<row;i++){
         k=0;
         l=col-1;
-        while(k!=l){
-            swap(arr[i][k],arr[i][l]);
+        while(k<l){
+            myswap(&arr[i][k],&arr[i][l]);
             k++;
             l--;    
         }
