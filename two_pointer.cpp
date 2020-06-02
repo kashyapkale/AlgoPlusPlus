@@ -18,7 +18,7 @@ void two_pointer(int arr[],int n){
         else if(arr[i]+arr[j] > key){
             j--;
         }
-        else if(arr[i]+arr[j] > key){
+        else if(arr[i]+arr[j] < key){
             i++;
         }
     }
