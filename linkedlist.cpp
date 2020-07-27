@@ -64,20 +64,28 @@ istream& operator>>(istream &is,node* &head){
     return is;
 }
 
-void reverseList(node* head){
+node* reverseList(node* &head){
     node* curr=head;
     node* temp;
-    node* prev;
+    node* prev = NULL;
     if(curr == NULL){
         cout<<"Empty Linked List"<<endl;
     }
     else{
         while(curr->next != NULL){
-            
-        }
-        cout<<curr->data<<endl;
+           temp = curr->next;
+           curr->next = prev;
+           prev = curr;
+           curr = temp;   
+        
+        }   
+           curr->next = prev;
+           prev = curr;
+           
     }
+    return prev;
 }
+
 
 
 
@@ -87,6 +95,10 @@ int main(){
     
     cin>>head;
     
+    cout<<head;
+
+    head = reverseList(head);
+
     cout<<head;
 
 }
