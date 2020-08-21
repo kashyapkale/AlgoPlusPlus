@@ -64,7 +64,7 @@ istream& operator>>(istream &is,node* &head){
     return is;
 }
 
-node* reverseList(node* &head){
+void reverseList(node* &head){
     node* curr=head;
     node* temp;
     node* prev = NULL;
@@ -77,17 +77,12 @@ node* reverseList(node* &head){
            curr->next = prev;
            prev = curr;
            curr = temp;   
-        
         }   
            curr->next = prev;
-           prev = curr;
-           
+           head = curr;  
     }
-    return prev;
+    //return prev;
 }
-
-
-
 
 int main(){
     
@@ -97,7 +92,7 @@ int main(){
     
     cout<<head;
 
-    head = reverseList(head);
+    reverseList(head);
 
     cout<<head;
 
