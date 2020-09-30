@@ -1,7 +1,7 @@
 //Merge Sort
 #include<iostream>
 #include<vector>
-#define MAX 100
+#define MAX 1000000
 #define lli long long
 using namespace std;
 
@@ -51,10 +51,16 @@ void mergeSort(int a[],int s,int e){
 int main() {
 	//vector<lli> v;
 	
-	int v[] = {12,6,32,4,13,9,3,22,27,10};
-    mergeSort(v,0,9);
+	//int v[] = {12,6,32,4,13,9,3,22,27,10};
+	int arr[MAX];
+	int N;
+	cin>>N;
 	for(int i = 0;i<10;i++) 
-		cout<<v[i]<<" ";
+		cin>>arr[i];
+
+    mergeSort(arr,0,N-1);
+	for(int i = 0;i<N;i++) 
+		cout<<arr[i]<<" ";
 
 	return 0;
 }
