@@ -2,8 +2,8 @@
 #include<vector>
 #define lli long long
 using namespace std;
-int main() {
-    int T;
+lli main() {
+    lli T;
     cin>>T;
     while(T--){
         

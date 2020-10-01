@@ -4,9 +4,9 @@
 using namespace std;
 
 //fun accept 2d array
-void input_array(int arr[][max],int row,int col){
-    for(int i = 0;i<row;i++){
-        for(int j = 0;j<col;j++){
+void input_array(lli arr[][max],lli row,lli col){
+    for(lli i = 0;i<row;i++){
+        for(lli j = 0;j<col;j++){
             cout<<"Enter element for Row : "<<i<<" and Column : "<<j<<" => ";
             cin>>arr[i][j];
             cout<<endl;
@@ -15,25 +15,25 @@ void input_array(int arr[][max],int row,int col){
 }
 
 //fun display 2d array
-void display_array(int arr[][max],int row,int col){
-    for(int i = 0;i<row;i++){
-        for(int j = 0;j<col;j++){
+void display_array(lli arr[][max],lli row,lli col){
+    for(lli i = 0;i<row;i++){
+        for(lli j = 0;j<col;j++){
             cout<<arr[i][j]<<" ";
         } 
         cout<<endl;
     }
 }
 
-void spiral_waves(int arr[][max],int row,int col){
+void spiral_waves(lli arr[][max],lli row,lli col){
    
-    for(int j = 0;j<col;j++){
+    for(lli j = 0;j<col;j++){
         if(j%2==0){
-            for(int i = 0; i<row ; i++){
+            for(lli i = 0; i<row ; i++){
                 cout<<arr[i][j]<<" ";
         }
         }
         else{
-            for(int i = row-1; i>=0 ; i--){
+            for(lli i = row-1; i>=0 ; i--){
                 cout<<arr[i][j]<<" ";
         }
         }
@@ -42,9 +42,9 @@ void spiral_waves(int arr[][max],int row,int col){
 
 }
 
-int main(){
-    int arr[max][max];
-    int row,col;
+lli main(){
+    lli arr[max][max];
+    lli row,col;
     cout<<"Enter number of rows : ";
     cin>>row;
     cout<<"Enter number of columns : ";

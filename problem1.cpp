@@ -1,6 +1,6 @@
 #include<iostream>
 #include<algorithm>
-#define lli long long int
+#define lli long long lli
 using namespace std;
 
 lli scholarship(lli N,lli M,lli X,lli Y){
@@ -26,7 +26,7 @@ lli scholarship(lli N,lli M,lli X,lli Y){
 
 
 
-int main(){
+lli main(){
     lli N,M,X,Y;
     cin>>N>>M>>X>>Y;
     cout<<scholarship(N,M,X,Y);

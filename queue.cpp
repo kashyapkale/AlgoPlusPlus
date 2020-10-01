@@ -5,12 +5,12 @@
 using namespace std;
 
 class queue{
-    int arr[MAX];
-    int rear = -1;
-    int front = -1;
+    lli arr[MAX];
+    lli rear = -1;
+    lli front = -1;
     public:
     queue(){
-        for(int i = 0;i<MAX;i++){
+        for(lli i = 0;i<MAX;i++){
             arr[i] = 0;
         }
     }
@@ -23,7 +23,7 @@ class queue{
         return (rear==(MAX-1))?true:false;
     }
 
-    void enqueue(int data){
+    void enqueue(lli data){
         if(rear==-1 && front==-1){
             front = rear = 0;
             arr[rear]=data;
@@ -50,7 +50,7 @@ class queue{
 
     void display(){
         if(!isEmpty()){
-            for(int i=front;i<=rear;i++){
+            for(lli i=front;i<=rear;i++){
             cout<<arr[i]<<" ";
         }
             
@@ -63,8 +63,8 @@ class queue{
 };
 
 
-int main() {
-    int T;
+lli main() {
+    lli T;
     cin>>T;
     queue s;
     s.dequeue();

@@ -14,7 +14,7 @@ char* split(char* str,char delim){
         return NULL;
     }
     char *output = new char(strlen(input+1));
-    int i=0;
+    lli i=0;
     for(  ; input[i]!='\0' ; i++ ){
         if(input[i]!=delim){
             output[i]=input[i];
@@ -33,7 +33,7 @@ char* split(char* str,char delim){
 }
 
 
-int main(){
+lli main(){
     char s[100];
     cout<<"Enter a string"<<endl;
     cin.getline(s,100);

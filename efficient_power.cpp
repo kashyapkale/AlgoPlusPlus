@@ -3,7 +3,7 @@ using namespace std;
 //Code to find efficient power of a number using recursion
 
 //Normal Power Function
-int power(int a,int n){
+lli power(lli a,lli n){
     if(n==1){
         return a;
     }
@@ -11,12 +11,12 @@ int power(int a,int n){
 }
 
 //optimised efficient power function
-int optimised_power(int a,int n){
+lli optimised_power(lli a,lli n){
     if(n==0){
         return 1;
     }
     //recursive case
-    int smaller_ans = optimised_power(a,n/2);
+    lli smaller_ans = optimised_power(a,n/2);
     smaller_ans *= smaller_ans;
 
     if(n&1){
@@ -26,7 +26,7 @@ int optimised_power(int a,int n){
     return smaller_ans;
 }
 
-int main(){
+lli main(){
     cout<<power(2,10)<<endl;
     cout<<optimised_power(2,10)<<endl;
     return 0;

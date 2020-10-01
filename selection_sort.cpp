@@ -4,7 +4,7 @@
 using namespace std;
 
 lli minIndex(vector<lli> &v,lli i ){
-	int mini = 1000000,ind;
+	lli mini = 1000000,ind;
 	for(;i<v.size();i++){
 		if(v[i]<mini){
 			mini = v[i];
@@ -15,14 +15,14 @@ lli minIndex(vector<lli> &v,lli i ){
 }
 
 void swap(lli *a,lli *b){
-	int temp;
+	lli temp;
 	temp = *a;
 	*a = *b;
 	*b = temp;
 	}
 
 void selectionSort(vector<lli> &v){
-	int i,j;
+	lli i,j;
 	lli temp,mini;
 	//cout<<v.size();
 	for(i=0;i<v.size();i++){
@@ -33,7 +33,7 @@ void selectionSort(vector<lli> &v){
 	}
 
 
-int main() {
+lli main() {
 	vector<lli> v;
 	lli N,temp;
 	cin>>N;

@@ -1,17 +1,17 @@
 //Merge Sort
 #include<iostream>
 #include<vector>
-#define MAX 1000000
-#define lli long long
+//#define MAX 1000000000
+#define lli long long int
 using namespace std;
 
-void merge(int *a,int s,int e){
-    int temp[MAX];
-    //int i = j = 0;
-    int mid = (s+e)/2;
-    int k = s;
-    int i = s;
-    int j = mid + 1;
+void merge(lli *a,lli s,lli e){
+    lli temp[200000];
+    //lli i = j = 0;
+    lli mid = (s+e)/2;
+    lli k = s;
+    lli i = s;
+    lli j = mid + 1;
     while(i<=mid && j<=e){
         if(a[i] < a[j]){
             temp[k++] = a[i++];
@@ -30,18 +30,18 @@ void merge(int *a,int s,int e){
     }
 
     //Copy all elements from temporary to original
-    for(int i=s;i<=e;i++){
+    for(lli i=s;i<=e;i++){
         a[i] = temp[i];
     }
 }
 
 
-void mergeSort(int a[],int s,int e){
+void mergeSort(lli a[],lli s,lli e){
     if(s>=e){
         return;
     }
 
-    int mid = (s+e)/2;
+    lli mid = (s+e)/2;
     mergeSort(a,s,mid);
     mergeSort(a,mid+1,e);
     merge(a,s,e); 
@@ -50,16 +50,16 @@ void mergeSort(int a[],int s,int e){
 
 int main() {
 	//vector<lli> v;
-	
-	//int v[] = {12,6,32,4,13,9,3,22,27,10};
-	int arr[MAX];
-	int N;
+	lli N;
 	cin>>N;
-	for(int i = 0;i<10;i++) 
+	//int v[] = {12,6,32,4,13,9,3,22,27,10};
+	lli arr[N];
+	
+	for(lli i = 0;i<N;i++) 
 		cin>>arr[i];
 
     mergeSort(arr,0,N-1);
-	for(int i = 0;i<N;i++) 
+	for(lli i = 0;i<N;i++) 
 		cout<<arr[i]<<" ";
 
 	return 0;

@@ -1,13 +1,13 @@
 #include<iostream>
 using namespace std;
-int main() {
-	int N;
+lli main() {
+	lli N;
 	cin>>N;
-	int arr[N];
-	for(int i=0;i<N;i++){
+	lli arr[N];
+	for(lli i=0;i<N;i++){
 		cin>>arr[i];
 	}
-	int j = N-1,flag = 1,i=0;
+	lli j = N-1,flag = 1,i=0;
 	while(i<=j){
 		if(arr[i]!=arr[j]){
 			flag = 0;

@@ -3,10 +3,10 @@
 using namespace std;
 
 
-int sqrt_m(int N){
-    int s = 1;
-    int e = N;
-    int mid = N/2,ans;
+lli sqrt_m(lli N){
+    lli s = 1;
+    lli e = N;
+    lli mid = N/2,ans;
 
     while(s<=e){
         if(mid*mid>N){
@@ -23,8 +23,8 @@ int sqrt_m(int N){
     return ans;
 }
 
-int main(){
-    int N;
+lli main(){
+    lli N;
     cin>>N;
     cout<<sqrt_m(N);
 }

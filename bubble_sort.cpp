@@ -3,7 +3,7 @@
 #define lli long long
 using namespace std;
 void bubbleSort(vector<lli> &v){
-	int i,j;
+	lli i,j;
 	lli temp;
 	//cout<<v.size();
 	for(i=0;i<v.size()-1;i++){
@@ -19,7 +19,7 @@ void bubbleSort(vector<lli> &v){
 	}
 }
 
-int main() {
+lli main() {
 	vector<lli> v;
 	lli N,temp;
 	cin>>N;

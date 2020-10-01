@@ -5,17 +5,17 @@ using namespace std;
 
 
 //swap function
-void myswap(int *a,int *b){
-    int temp;
+void myswap(lli *a,lli *b){
+    lli temp;
     temp=*a;
     *a=*b;
     *b=temp;
 }
 
 //fun accept 2d array
-void input_array(int arr[][max],int row,int col){
-    for(int i = 0;i<row;i++){
-        for(int j = 0;j<col;j++){
+void input_array(lli arr[][max],lli row,lli col){
+    for(lli i = 0;i<row;i++){
+        for(lli j = 0;j<col;j++){
             cout<<"Enter element for Row : "<<i<<" and Column : "<<j<<" => ";
             cin>>arr[i][j];
             cout<<endl;
@@ -24,9 +24,9 @@ void input_array(int arr[][max],int row,int col){
 }
 
 //fun display 2d array
-void display_array(int arr[][max],int row,int col){
-    for(int i = 0;i<row;i++){
-        for(int j = 0;j<col;j++){
+void display_array(lli arr[][max],lli row,lli col){
+    for(lli i = 0;i<row;i++){
+        for(lli j = 0;j<col;j++){
             cout<<arr[i][j]<<" ";
         } 
         cout<<endl;
@@ -34,9 +34,9 @@ void display_array(int arr[][max],int row,int col){
 }
 
 
-void reverse_rows(int arr[][max],int row,int col){
-    int k,l;
-    for(int i = 0;i<row;i++){
+void reverse_rows(lli arr[][max],lli row,lli col){
+    lli k,l;
+    for(lli i = 0;i<row;i++){
         k=0;
         l=col-1;
         while(k<l){
@@ -48,10 +48,10 @@ void reverse_rows(int arr[][max],int row,int col){
     }
 }
 
-void transpose(int arr[][max],int row,int col){
-    //int arr2[max][max];
-    for(int i = 0;i<row;i++){
-        for(int j = 0;j<col;j++){
+void transpose(lli arr[][max],lli row,lli col){
+    //lli arr2[max][max];
+    for(lli i = 0;i<row;i++){
+        for(lli j = 0;j<col;j++){
             cout<<arr[j][i]<<" ";
         } 
         cout<<endl;
@@ -61,7 +61,7 @@ void transpose(int arr[][max],int row,int col){
 
 
 //fun to rotate the array by 90deg
-void rotate_array(int arr[][max],int row,int col){
+void rotate_array(lli arr[][max],lli row,lli col){
 
 cout<<"Rotating the Array by 90 deg";
 
@@ -73,9 +73,9 @@ transpose(arr,row,col);
 
 }
 
-int main(){
-    int arr[max][max];
-    int row,col;
+lli main(){
+    lli arr[max][max];
+    lli row,col;
     cout<<"Enter number of rows : ";
     cin>>row;
     cout<<"Enter number of columns : ";

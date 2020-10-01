@@ -5,11 +5,11 @@
 using namespace std;
 
 class stack{
-    int arr[MAX];
-    int top = -1;
+    lli arr[MAX];
+    lli top = -1;
     public:
     stack(){
-        for(int i = 0;i<MAX;i++){
+        for(lli i = 0;i<MAX;i++){
             arr[i] = 0;
         }
     }
@@ -28,7 +28,7 @@ class stack{
             return false;
     }
 
-    int Top(){
+    lli Top(){
         if(!isEmpty()){
             return top;
         }
@@ -36,7 +36,7 @@ class stack{
             cout<<"Stack is Empty"<<endl;
     }
     
-    void push(int data){
+    void push(lli data){
         if(!isFull()){
             top++;
             arr[top]=data;
@@ -56,7 +56,7 @@ class stack{
 
     void display(){
         if(!isEmpty()){
-            for(int i=top;i>=0;i--){
+            for(lli i=top;i>=0;i--){
                 cout<<arr[i]<<endl;
             }
         }
@@ -70,8 +70,8 @@ class stack{
 };
 
 
-int main() {
-    int T;
+lli main() {
+    lli T;
     cin>>T;
     stack s;
     s.push(5);

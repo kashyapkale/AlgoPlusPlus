@@ -1,21 +1,21 @@
 #include<iostream>
 #include<algorithm>
-#define lli long long int
+#define lli long long lli
 using namespace std;
 
 //LinkedList Class
 class node{
     public:
-        int data;
+        lli data;
         node*next;
-        node(int d){
+        node(lli d){
             data = d;
             next = NULL;
         }
 };
 
 //Function to insert data at the tail
-void insertdata(int data,node* &head){
+void insertdata(lli data,node* &head){
     node* curr=head;
     if(curr == NULL){
         head = new node(data);
@@ -46,7 +46,7 @@ void displayLinkedList(node* head){
 
 
 void takeInput(node* &head){
-    int d;
+    lli d;
     cin>>d;
     while(d!=-1){
         insertdata(d,head);
@@ -84,7 +84,7 @@ void reverseList(node* &head){
     //return prev;
 }
 
-int main(){
+lli main(){
     
     node* head = NULL;
     
