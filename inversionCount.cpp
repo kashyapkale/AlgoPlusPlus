@@ -1,12 +1,13 @@
-//Merge Sort
+//Inversion Count
 #include<iostream>
 #include<vector>
 //#define MAX 1000000000
 #define lli long long int
 using namespace std;
 
-void merge(lli *a,lli s,lli e){
+ int merge(lli *a,lli s,lli e){
     lli temp[200000];
+    lli cnt = 0;
     //lli i = j = 0;
     lli mid = (s+e)/2;
     lli k = s;
@@ -18,8 +19,10 @@ void merge(lli *a,lli s,lli e){
         }
         else{
             temp[k++] = a[j++];
+            cnt += mid - i + 1; 
         }
     }
+    
 
     while(i<=mid){
         temp[k++] = a[i++];
@@ -33,18 +36,20 @@ void merge(lli *a,lli s,lli e){
     for(lli i=s;i<=e;i++){
         a[i] = temp[i];
     }
+
+    return cnt;
 }
 
 
-void mergeSort(lli a[],lli s,lli e){
+lli inversion_Count(lli a[],lli s,lli e){
     if(s>=e){
-        return;
+        return 0;
     }
 
     lli mid = (s+e)/2;
-    mergeSort(a,s,mid);
-    mergeSort(a,mid+1,e);
-    merge(a,s,e); 
+    lli A = inversion_Count(a,s,mid);
+    lli B = inversion_Count(a,mid+1,e);
+    lli C  = merge(a,s,e); 
 }
 
 
